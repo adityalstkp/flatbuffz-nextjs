@@ -1,0 +1,25 @@
+namespace users;
+
+table User {
+    name:string;
+    email:string;
+    address:[Address];
+    phone:string;
+}
+
+table Geo {
+    lat:string;
+    long:string;
+}
+
+table Address {
+    street:string;
+    city:string;
+    geo:Geo;
+}
+
+table Users {
+    list:[User];
+}
+
+root_type User;
